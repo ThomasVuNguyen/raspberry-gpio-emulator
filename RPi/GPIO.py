@@ -7,7 +7,7 @@ except ImportError:
     
 from . import __version__
 from . import pin as pins
-#from .launcher import ui
+from .launcher import ui
 from .task import SyncTask
 
 VERSION = __version__
@@ -130,7 +130,7 @@ def __change_gpio_in(channel):
     pin.push_event(RISING if pin.is_high else FALLING)
     ui.change_gpio_in(channel, pin.is_high)
 
-
+#Updates UI on GPIO change
 ui.on_change = __change_gpio_in
 
 
