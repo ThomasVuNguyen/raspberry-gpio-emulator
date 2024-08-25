@@ -7,7 +7,7 @@ except ImportError:
     
 from . import __version__
 from . import pin as pins
-from .launcher import ui
+#from .launcher import ui
 from .task import SyncTask
 
 VERSION = __version__
